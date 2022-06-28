@@ -20,7 +20,7 @@ app.get("/",(resq,res) => {
   })
   
 app.listen(port, () => {
-  mongoose.connect('mongodb+srv://TokenAlpha:GtPkohHwZt9drVi9@cluster0.zcmvm.mongodb.net/Santa-magical-world?retryWrites=true&w=majority')
+  mongoose.connect('MONGO_URL')
   .then(()=>console.log('Connexion à MongoDB réussie !')) 
   .catch(err => console.log("Error Connexion"))
  // console.log('express start at http://localhost:${port}')
