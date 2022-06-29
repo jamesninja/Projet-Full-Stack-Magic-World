@@ -1,4 +1,4 @@
-import React ,{ Fragment,useState,useEffect } from "react";
+import React ,{useState,useEffect } from "react";
 import axios from 'axios';
 
 function CategoriesList(){
@@ -17,17 +17,17 @@ function CategoriesList(){
   },[])
 
   return(
-    <Fragment>
-      <ul>
+    <>
+      <div>
         {data.map(item =>{
           return (
-                <li key={item.id}>
+                <div key={item.id}>
                     <p>{item.name}</p>
-                </li>
+                </div>
                 )
         })}
-      </ul>
-    </Fragment>
+      </div>
+    </>
   )
 }
 export default CategoriesList;

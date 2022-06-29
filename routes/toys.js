@@ -3,7 +3,7 @@
       import mongoose from "mongoose";
       const router = express.Router();
       import Toy from "../models/toys.js"
-      // import Categorie from "../models/categories.js"
+      import Categorie from "../models/categories.js"
 
       // **Create**/////////////////////////////////////////////////////
       router.post("/", async (req, res) => {
@@ -12,6 +12,7 @@
         name: req.body.name,
         description: req.body.description,
         price: req.body.price,
+        categories:[],
         categorie_id: req.body.categorie_id
       });
       await newToy.save();
@@ -20,6 +21,23 @@
       res.status(400).json({ error: error.message });
       }
       });
+
+
+router.get('/projects', (req, res, next) => {
+  Project.find().populate('tasks')
+    .then(allTheProjects => {
+      res.json(allTheProjects);
+    })
+    .catch(err => {
+      res.json(err);
+    })
+});
+
+
+
+
+
+
 
       // **ReadAll**/////////////////////////////////////////////////////
       router.get("/", async (req, res) => {

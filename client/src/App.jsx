@@ -1,12 +1,14 @@
 
-import React ,{ Fragment} from "react";
-
-import NavBar from './components/NavBar/NavBar';
+import React from "react";
+import ToysList from './components/ToysList/ToysList';
+import EditToys from './components/ToysList/EditToys';
 
 function App(){
   return(
     <>
-     <NavBar/>
+     <div >Les Jouets</div>
+     <ToysList className ='to-toys-list'/>
+     <EditToys className ='to-edit-toys'/>
     </>
   )
 }

@@ -1,5 +1,7 @@
-import React ,{ Fragment,useState,useEffect } from "react";
+import React ,{useState,useEffect } from "react";
 import axios from 'axios';
+
+
 
 function ToysList(){
   const [data,setData] = useState([]);
@@ -18,17 +20,18 @@ function ToysList(){
 
   return(
     <>
-      <ul>
+      {/* <div>
         {data.map(item =>{
           return (
-                <li key={item.id}>
+            
+                <div key={item.id}>
                     <p>{item.name}</p>
                     <p>{item.descriptif}</p>
                     <p>{item.price}</p>
-                </li>
+                </div>
                 )
         })}
-      </ul>
+      </div> */}
     </>
   )
 }
