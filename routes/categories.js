@@ -2,7 +2,7 @@
     import  express  from "express";
     import mongoose from "mongoose";
     const router = express.Router();
-    // import Toy from "../models/toys.js"
+    import Toys from "../models/toys.js"
     import Categorie from "../models/categories.js"
 
     // **Create**///////////////////////////////////////////////////////////////////////////

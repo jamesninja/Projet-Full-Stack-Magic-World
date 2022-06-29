@@ -1,18 +1,15 @@
 {
-  "name": "tbouani-santa-s-magical-world",
+  "name": "magical-world",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.matrice.io/santa-s-magical-world-837/tbouani-santa-s-magical-world"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.3.5"
